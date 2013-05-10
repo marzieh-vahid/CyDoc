@@ -1,0 +1,9 @@
+%table.table.table-striped
+  %tr
+    %th.right= t_attr(:code, TariffItem)
+    %th= t_attr(:remark, TariffItem)
+    %th.right= t_attr(:amount_mt, TariffItem)
+    %th.right= t_attr(:amount_tt, TariffItem)
+    %th.right= t_attr(:amount, TariffItem)
+
+  = render :partial => 'tariff_item', :collection => collection

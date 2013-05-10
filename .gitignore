@@ -1,0 +1,51 @@
+# Boring files
+# ============
+*~
+.#*
+_darcs
+DEADJOE
+
+# Rails
+# =====
+.bundle
+db/*.sqlite3
+log/*.log
+tmp/**/*
+.sass-cache/
+# Vendor
+vendor/cache
+vendor/bundle
+
+# Volatile
+doc/api
+doc/app
+public/stylesheets/all.css
+
+# Local
+config/database.yml
+
+# Passenger
+# =========
+tmp/restart.txt
+
+# Rails Plugins
+# =============
+# restful-authentication
+config/initializers/site_keys.rb
+
+# carrier-wave
+uploads
+
+# Sphinx Freetext Search
+db/sphinx
+config/*.sphinx.conf
+config/sphinx/
+
+# SwissMatch
+config/swissmatch.yml
+
+# CyDoc
+# =====
+data/
+db/backup/
+public/esr_files

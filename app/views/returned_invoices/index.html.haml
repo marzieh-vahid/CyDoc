@@ -1,0 +1,9 @@
+.contextual
+  = contextual_link_to :new
+
+%h2= t_title
+
+- if collection.any?
+  = render "list"
+
+= render 'sidebar'

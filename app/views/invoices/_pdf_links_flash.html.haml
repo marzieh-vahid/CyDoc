@@ -1,0 +1,5 @@
+#notice_flash
+  = boot_alert do
+    = t('printing.pdf_done')
+    - views.each do |view|
+      = icon_link_to view, polymorphic_url([view, @invoice], :format => :pdf), :icon => 'pdf', :target => view

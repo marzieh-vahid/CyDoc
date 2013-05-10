@@ -1,0 +1,11 @@
+.contextual
+  = icon_link_to :index
+  = icon_link_to "Erneut drucken", reprint_invoice_batch_job_path, :method => :post
+
+= boot_page_title
+
+%h3= t_attr :failed_jobs
+= render 'invalid_treatments', :collection => resource.failed_jobs
+
+%h3= t_attr(:bills)
+= render 'invoices/list', :collection => resource.invoices

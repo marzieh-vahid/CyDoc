@@ -1,0 +1,10 @@
+%h3= t_attr(:price)
+%table.table.table-striped
+  %tr
+    %th.right= t_attr(:amount_mt, TariffItem)
+    %th.right= t_attr(:amount_tt, TariffItem)
+    %th.right= t_attr(:amount, TariffItem)
+  %tr[resource]
+    %td.right= currency_fmt(resource.amount_mt)
+    %td.right= currency_fmt(resource.amount_tt)
+    %td.right= currency_fmt(resource.amount)

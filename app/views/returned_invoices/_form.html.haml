@@ -1,0 +1,10 @@
+= simple_form_for resource do |f|
+  .row-fluid
+    .span6= f.input :invoice_id, :as => :string, :input_html => {'data-autofocus' => true}
+    .span6= f.input :state, :collection => resource_class.aasm_states_for_select
+  .row-fluid
+    .span12= f.input :remarks, :input_html => {:class => 'span12', :rows => 4}
+
+  .form-actions
+    = f.button :submit
+

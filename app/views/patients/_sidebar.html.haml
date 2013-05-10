@@ -1,0 +1,9 @@
+.well.well-small
+  %legend= t_title(:index, Treatment)
+  %ul.nav.nav-list
+    - for treatment in resource.treatments
+      %li.nav-header
+        = link_to treatment.to_s(:short), treatment
+      - for invoice in treatment.invoices
+        %li
+          = link_to invoice.to_s(:short), invoice, :class => ['invoice', invoice.state, invoice.reminded? ? "reminded" : ""].join(' ')

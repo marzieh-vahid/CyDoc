@@ -1,0 +1,28 @@
+.contextual
+  - if @invoice.reminded?
+    = icon_link_to :print_dunning_letter_copy, print_reminder_letter_invoice_path(@invoice, :print_copy => true), :onclick => "showPrintingFlash('Mahnkopie')", :remote => true, 'data-method' => :post
+  - if @invoice.overdue?
+    = icon_link_to :print_dunning_letter, print_reminder_letter_invoice_path(@invoice), :onclick => "showPrintingFlash('Mahnung')", :remote => true, 'data-method' => :post
+  - if @invoice.state == 'prepared'
+    = icon_link_to :print, print_invoice_path(@invoice), :onclick => "showPrintingFlash('#{t_model(Invoice)}')", :remote => true, :method => :post
+  - else
+    = icon_link_to :print_copy, print_invoice_path(@invoice, :print_copy => true), :method => :post, :remote => true
+  - if @invoice.active
+    = icon_link_to :cancel, invoice_path(@invoice), 'data-method' => :delete, :confirm => "#{t_model(Invoice)} #{@invoice.to_s} #{t_action(:cancel)}?"
+    = icon_link_to :reactivate, reactivate_invoice_path(@invoice), 'data-confirm' => "#{t_model(Invoice)} #{@invoice.to_s} #{t_action(:reactivate)}?", 'data-method' => :post
+  - elsif @invoice.state == 'canceled' or @invoice.state == 'written_off'
+    = icon_link_to :reactivate, reactivate_invoice_path(@invoice), 'data-confirm' => "#{t_model(Invoice)} #{@invoice.to_s} #{t_action(:reactivate)}?", 'data-method' => :post
+
+= render 'invoices/show_main'
+
+.contextual
+  = link_to t('cydoc.actions.book_manual'), new_invoice_booking_path(@invoice), 'data-remote' => true, :class => "icon icon-book"
+
+%h3= t('cydoc.title.bookings')
+
+#invoice_booking_list
+  = render :partial => 'invoice_bookings/list', :object => @invoice.bookings
+
+= render 'invoices/medical_case_list'
+
+= render 'invoices/service_record_list'

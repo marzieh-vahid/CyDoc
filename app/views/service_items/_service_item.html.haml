@@ -1,0 +1,18 @@
+%tr[service_item]
+  %td{:style => "text-align:right"}
+    = service_item.quantity
+    x
+  %td{:style => "text-align:right"}
+    = service_item.code
+    - if service_item.needs_ref_code?
+      = service_item.ref_code
+  %td= service_item.text
+  %td{:style => "text-align:right"}
+    = sprintf('%.2f', service_item.amount_mt)
+    \&nbsp;AL
+  %td{:style => "text-align:right"}
+    = sprintf('%.2f', service_item.amount_tt)
+    \&nbsp;TL
+  %td{:style => "text-align:right"}
+    %b>= sprintf('%.2f', service_item.amount)
+    \&nbsp;CHF

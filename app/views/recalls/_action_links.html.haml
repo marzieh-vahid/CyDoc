@@ -1,0 +1,10 @@
+= link_to image_tag('edit.png'), edit_recall_path(recall)
+= link_to image_tag('pdf.png'), recall_path(recall, :format => :pdf) if recall.state == 'sent'
+- for state in recall.aasm_events_for_current_state
+  - case state
+    - when :obey
+      = link_to image_tag('true.png'), obey_recall_path(recall), :method => :post, :title => t('cydoc.state.recall.accepted'), :remote => true
+    - when :cancel
+      = link_to image_tag('delete.png'), recall_path(recall), :method => :delete, :title => t('cydoc.state.recall.refused'), :remote => true
+    - when :prepare
+      = link_to image_tag('send.png'), prepare_recall_path(recall), :method => :post, :title => t('cydoc.state.recall.send'), :remote => true

@@ -1,0 +1,512 @@
+de-CH:
+  application:
+    title: CyDoc
+  activerecord:
+    attributes:
+      account:
+        balance:          Saldo
+        credit:           Haben
+        date:             Datum
+        debit:            Soll
+        esr_id:           ESR-Nummer
+        name:             Name
+        number:           Nummer
+        pc_id:            PC-Nummer
+        reference:        Referenz
+        text:             Text
+      appointment:
+        date:    Am
+        from:    Von
+        remarks: Bemerkungen
+        to:      Bis
+      attachment:
+        file:             Dateiname
+        title:            Titel
+        code:           Verwenden als
+        code_enum:
+          DoctorOrderForm: Auftragsformular
+          LetterDocument: Briefvorlage
+          PatientLetter:  Rechnungsvorlage
+          ReminderLetter: Mahnvorlage
+      booking:
+        amount:           Summe
+        average:          Durchschnitt
+        count:            Anzahl
+        reference_id:     Rechnungsnr.
+        till:             bis
+        title:            Titel
+        total:            Total
+        turn_over:        Umsatz
+      doctor:
+        ean_party:         EAN-Nr.
+        zsr:               ZSR-Nr.
+        print_payment_for: '"Zugunsten von" auf Einzahlungschein drucken'
+      drug_article:
+        code:             Code
+        content:          Inhalt
+        description:      Beschreibung
+        doctors_price:    Arztpreis
+        name:             Name
+        number_of_pieces: Menge
+        price:            Publikumspreis
+        quantity:         Anzahl
+        quantity_unit:    Einheit
+        vat_class:        MwSt %
+      drug_product:
+        description: Beschreibung
+        name:        Name
+        packages:    Packungen
+      insurance:
+        contact:          Kontakt
+        informations:     Informationen
+        members:          Mitglieder
+        ean_party:        EAN-Nummer
+        group_ean_party:  EAN-Gruppe
+        role:             Rolle
+        role_enum:
+          H:              Krankenversicherung (KVG)
+          A:              Unfallversicherung (UVG)
+        role_enum_code:
+          H:              KVG
+          A:              UVG
+      tiers:
+        biller:           Rechnungssteller
+        provider:         Leistungserbringer
+      invoice:
+        amount_due: Fälliger Betrag
+        amount_pfl: davon PFL
+        balance: "Saldo"
+        biller: Rechnungssteller
+        cantonal: Kantonal
+        date: Rechnungsdatum
+        date_begin: Behandlungen von
+        date_end: Behandlungen bis
+        due_date: Fälligkeit
+        due_date_till: Zahlbar bis
+        id: Patientenrechnung Nr.
+        laboratory: Labor
+        law: Gesetz
+        medi: Medi
+        mi_gel: MiGel
+        open_amount: "Offener Betrag"
+        others: Übrige
+        patient: Patient
+        billing_address: Rechnungsadressat
+        pfl: PFL
+        physio: Physio
+        prepayment: Anzahlung
+        provider: Leistungserbringer
+        reclaim_recipe: Rückforderungsbeleg
+        referrer: Zuweisender Arzt
+        remark:     Bemerkungen
+        state: Status
+        tarmed_al: Tarmed AL
+        tarmed_tl: Tarmed TL
+        tiers: Vergütungsart
+        total: Total
+        total_amount: Gesamtbetrag/CHF
+        treatment_reason: Behandlungsgrund
+        value_date: Rechnungsdatum
+        vat: MWSt
+        vat_amount: Betrag
+        vat_code: Code
+        vat_number: MWSt.Nr.
+        vat_rate: Satz
+      invoice_batch_job:
+        created_at:   Vom
+        value_date:   Rechnungsdatum
+        count:        Anzahl Rechnungen
+        total_count:  Total
+        failed_count: Fehlerhaft
+        failed_jobs:  Fehler
+        bills:        Rechnungen
+      law:
+        code:         Gesetz
+      reminder_batch_job:
+        created_at:   Vom
+        value_date:   Rechnungsdatum
+        count:        Anzahl Rechnungen
+        total_count:  Total
+        failed_count: Fehlerhaft
+        failed_jobs:  Fehler
+      returned_invoice:
+        state:        Status
+        remarks:      Bemerkungen
+        invoice_id:   Rechnungsnr.
+      patient:
+        accident_insurance: 'Unfallversicherung'
+        accident_insurance_short_cut: 'UVG'
+        address: Adresse
+        vcard: Adresse
+        billing_vcard: Rechnungsadresse
+        birth_date:  Geburtstag
+        doctor_patient_nr: Patientennr.
+        family_name: Nachname
+        female: 'Weiblich'
+        gender: Geschlecht
+        given_name:  Vorname
+        health_insurance: 'Krankenversicherung'
+        health_insurance_short_cut: 'KVG'
+        insurance: "Versicherung"
+        insurance_number: "Nummer"
+        locality: Ort
+        male: 'Männlich'
+        name: Name
+        number: PatientenNr.
+        police_type: "Art"
+        postal_code: PLZ
+        remarks: Bemerkungen
+        salutation: Anrede
+        street_address: Strasse
+        dunning_stop: Mahnstopp
+        use_billing_address: Rechnungsadresse aktiv
+        covercard_code: Covercard-ID
+        doctor: Arzt
+      insurance_policy:
+        number: Versicherungsnr.
+        insurance: Versicherung
+      phone_number:
+        phone_number: "Nummer"
+        phone_number_type: "Art"
+        business_phone: 'Tel. geschäft'
+        email: 'E-Mail'
+        fax: 'Fax'
+        mobile: 'Handy'
+        private_phone: 'Tel. privat'
+      recall:
+        appointment: 'Terminvorschlag'
+        due_date: Datum
+        expire_date: Fälligkeit
+        last_appointment: Letzt. Termin
+        offer: Vorschlag
+        patient: Patient
+        printed: Gedruckt
+        remark: Bemerkungen
+        remarks:  Bemerkungen
+      tariff_item:
+        price:          Preis
+        amount:         Betrag
+        amount_mt:      TP AL/Preis
+        amount_tt:      TP TL
+        code:           Code
+        obligation:     Kassenpflichtig
+        remark:         Beschreibung
+        type_as_string: Tarif
+        vat_class:      MwSt
+      treatment:
+        amount: Total CHF
+        date_begin: Behandlung von
+        date_end: Behandlung bis
+        law: Gesetz
+        patient: Patient
+        place_type: Erbringungsort
+        reason: Behandlungsgrund
+        referrer: Zuweisender Arzt
+        diagnoses: Diagnose Codes
+      user:
+        email:     E-Mail
+        password:  Passwort
+        login:     Benutzername
+        locked_at: Gesperrt seit
+        last_sign_in_at: Letzter Login
+        object_reference:     Verknüpfte Person
+      tenant:
+        settings:
+          patients:
+            sex:   Geschlecht
+          printing:
+            cups:  Drucken per CUPS
+            cups_hostname: CUPS-Server
+            invoice:    Rechnungsformulare
+            plain:      Normalpapier
+          invoices:
+            defaults:
+              biller_id:  Standart Rechnungssteller
+              provider_id: Standart Leistungserbringer
+            payment_period:  Zahlungsfrist
+            grace_period:    Gnadenfrist
+            reminders:
+              '1':
+                payment_period: Zahlungsfrist
+                grace_period:   Gnadenfrist
+                fee:            Mahngebühr
+              '2':
+                payment_period: Zahlungsfrist
+                grace_period:   Gnadenfrist
+                fee:            Mahngebühr
+              '3':
+                payment_period: Zahlungsfrist
+                grace_period:   Gnadenfrist
+                fee:            Mahngebühr
+
+        users:     Benutzer
+
+    models:
+      account:            Konto
+      attachment:         Anhang
+      doctor:             Arzt
+      drug_article:       Medikamentenpackung
+      drug_product:       Medikament
+      drug_tariff_item:   Medikament
+      employee:           Mitarbeiter
+      insurance:          Versicherung
+      invoice:            Rechnung
+      reminder:           Mahnung
+      invoice_batch_job:  Rechnungslauf
+      reminder_batch_job: Mahnlauf
+      lab_tariff_item:    Labor Leistung
+      migel_tariff_item:  MiGel Leistung
+      free_tariff_item:   Leistung
+      patient:            Patient
+      physio_tariff_item: Physiotherapie Leistung
+      recall:             Recall
+      returned_invoice:   Unzustellbare Rechnungen
+      session:            Konsultation
+      tariff_item:        Leistung
+      tariff_item_group:  Blockleistung
+      tarmed_tariff_item: Tarmed Leistung
+      treatment:          Fall
+      user:               Benutzer
+      tenant:             Mandant
+  cydoc:
+    covercard_search:
+      date_patients: "Treffer mit dem Geburtstag"
+      exact_patients: "Volltreffer"
+      name_patients: "Treffer mit dem Namen"
+      no_result: "Kein Suchergebnis"
+      result: "Covercard-Treffer"
+    navigation:
+      accounting: 'Buchhaltung'
+      accounts: 'Konten'
+      accounts_statistics: "Konto Statistiken"
+      all_bookings: "Alle Buchungen"
+      balance_sheet: "Jahresabschluss"
+      create: "Erfassen"
+      doctors: "Ärzte"
+      drug_products: "Medikamente"
+      esr: 'VESR'
+      esr_files: "VESR Journal"
+      help: "Hilfe"
+      home: "Home"
+      insurances: "Versicherungen"
+      master_data: Stammdaten
+      new_esr: "VESR Datei einlesen"
+      unresolved_records: "Falsche VESR Buchungen"
+      open_cases: "Offene Fälle"
+      open_positions: "Offene Posten"
+      patients: 'Patienten'
+      payment_overview: "Suchen"
+      invoice_batch_job: "Rechnungsläufe"
+      reminder_batch_job: "Mahnläufe"
+      create_treatments: "Fälle importieren"
+      payments: 'Rechnungen'
+      recalls: "Recalls"
+      reminder_list: "Mahnliste"
+      search: "Suchen"
+      service: "Leistungen"
+      show_accounts: "Konten anzeigen"
+      show_debtors: "Debitoren anzeigen"
+      show_doctors: "Ärzte anzeigen"
+      show_drug_products: "Medikamente anzeigen"
+      show_insurances: "Versicherungen anzeigen"
+    recall:
+      appointed_time: "Terminvorschlag"
+      last_appointment: "Letzter Termin"
+      no_appointment: "Kein Termin"
+      offer_printed: "Aufgebot gedruckt"
+    search:
+      search: "Suche"
+      searching: "Suchen"
+    state:
+      recall:
+        accepted: "Termin akzeptiert"
+        refused: "Will keinen Termin"
+        send: "Aufgebot senden"
+    tab_container:
+      patient:
+        invoice: 'Rechnungen'
+        personal_data: 'Personalien'
+        treatment: 'Fälle'
+      recall:
+        applied_recalls: 'Anstehende Recalls'
+        list: Termine
+        send_recalls: 'Versandte Recalls'
+    title:
+      accounts: Konten
+      bookings: Buchungen
+      cases: Fälle
+      contact: Kontakt
+      filter: Filter
+      insurance: Versicherungen
+      medical_cases: Diagnosen
+      new_patient: Patient erfassen
+      personal_data: Personalien
+      billing_data: Rechnungsdaten
+      recall: Recall
+      recalls: Recalls
+      treatment: Behandlung
+      treatment_sessions: Leistungen
+      unknown_assigning_doctor: Zuweisender Arzt unbekannt.
+      covercard: Covercard
+    user_bar:
+      logged_in_as: "Angemeldet als"
+      login: "Anmelden"
+      logout: "Abmelden"
+  date:
+    formats:
+      month: "%B %Y"
+  invoice:
+    state:
+      prepared:    offen
+      booked:      verbucht
+      printed:     gedruckt
+      canceled:    storniert
+      reactivated: reaktiviert
+      reminded:    1x gemahnt
+      2xreminded:  2x gemahnt
+      3xreminded:  3x gemahnt
+      encashment:  in Inkasso
+      paid:        bezahlt
+      written_off: abgeschrieben
+
+  printing:
+    preparing: "%{model} wird aufbereitet..."
+    done:      "%{model} wurde an Drucker gesendet."
+    pdf_done:  "Dokument zum Download bereit:"
+
+  attachments:
+    index:
+      title:         Dokumente
+  tariff_items:
+    index:
+      title:              Leistungskatalog
+  tariff_item_groups:
+    index:
+      title:              Blockleistungen
+  invoices:
+    index:
+      title:              Rechnungen
+    overdue:
+      title:              Überfällige Rechnungen
+  invoice_batch_jobs:
+    index:
+      title:              Rechnungsläufe
+  reminder_batch_jobs:
+    index:
+      title:              Mahnläufe
+  returned_invoices:
+    edit_ready:
+      title:              Neue vorbereiten
+    index:
+      title:              Inkasso
+  patients:
+    dunning_stopped:
+      title:              Patienten mit Mahnstopp
+    index:
+      title:            Patienten
+  doctors:
+    show:
+      tab:
+        show:             Arzt Informationen
+        invoicing:        Rechnungseinstellungen
+  insurances:
+    show:
+      tab:
+        show:             Versicherung
+        group_show:       Versicherungsgruppe
+  boolean:
+    true:  Ja
+    false: Nein
+
+  letters:
+    greetings:        Freundliche Grüsse
+
+  placeholder:
+    search: Suche
+
+  crud:
+    action:
+      more: "Mehr"
+      abort: "Abbrechen"
+      accounts: "Kontoliste"
+      add_insurance: "Versicherung zuweisen"
+      address_label: "Adress-Etikette"
+      all: "Alle"
+      book_manual: "Manuell buchen"
+      cancel: "Stornieren"
+      create: "Erfassen"
+      delete: "Löschen"
+      delete_treatment: "Fall %{treatment} löschen?"
+      edit_recall: "Recall editieren"
+      esr: "VESR Liste"
+      kg_label: "KG-Etikette"
+      new_booking: "Neue Buchung"
+      new_case: "Fall eröffnen"
+      new_contact: "Kontakt erfassen"
+      new_invoice: "Rechung stellen"
+      new_medical_case: "Neue Diagnose"
+      new_recall: "Recall erfassen"
+      new_treatment_session: "Neue Konsultation"
+      print: "Drucken"
+      print_account: "Kontoauszug drucken"
+      print_copy: "Rechnungskopie drucken"
+      print_dunning_letter: "Mahnung drucken"
+      print_dunning_letter_copy: "Mahnkopie drucken"
+      print_reclaim_pdf: "Rückforderungsbeleg PDF"
+      reactivate: "Reaktivieren"
+      save: "Speichern"
+      show_all: "Alle anzeigen"
+      show_letter: "Brief anzeigen"
+      to_pdf: "Als PDF"
+      update: "Ändern"
+      covercard_update: "Covercard-Abgleich"
+      covercard_search: "HIN-Abfrage starten"
+      search:             Suchen
+      queue_request:      Anfragen
+      queue_all_requests: Alle anfragen
+      reactivate:         Reaktivieren
+      write_off:          Abschreiben
+      book_extra_earning: Ausserordentlicher Gewinn verbuchen
+      book_payback:       Rückzahlung verbuchen
+      resolve:            Als erledigt markieren
+      edit_ready:         Neue vorbereiten
+      show_order_form:    Auftragsformular
+      print_request_document: Adressanfrage
+      next:               Speichern & weiter
+      update_remarks:     Notiz speichern
+      pdf:                PDF
+      resolved:           Abgeschlossen
+      request_pending:    Pendent
+      ready:              Neu
+      patient_from_covercard: "Als Patient erfassen"
+      trim_patient:       Abgleichen
+      revert:             Zurücksetzen
+      insurance_recipe:   Rückforderungsbeleg
+      patient_letter:     Rechnung
+      reminder_letter:    Mahnung
+      close:              Schliessen
+
+  # Filters
+  invoice_state:
+    2xreminded: "2x gemahnt"
+    3xreminded: "3x gemahnt"
+    all: Alle
+    booked: offen
+    canceled: storniert
+    encashment: "in Inkasso"
+    overdue: überfällig
+    paid: bezahlt
+    reactivated: reaktiviert
+    reminded: "1x gemahnt"
+    title: Rechnungsfilter
+    written_off: abgeschrieben
+
+  cancan:
+    roles:
+      admin:    Administrator
+      sysadmin: System Administration
+      employee:   Mitarbeiter
+      doctor:   Arzt
+  flash:
+    action:
+      dunning_stop:     Mahnstopp gesetzt

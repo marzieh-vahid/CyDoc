@@ -1,0 +1,16 @@
+- cache [I18n.locale, @treatment.cache_key] do
+  = render 'treatments/show_main'
+
+  #new_treatment_invoice
+
+  - if @treatment.medical_cases.present?
+    %h3= t('cydoc.title.medical_cases')
+    %table.table
+      = render @treatment.medical_cases
+
+  #treatment_sessions
+    #treatment_session_list
+      = render 'sessions/list', :collection => @treatment.sessions
+    = render 'treatments/show_total', :treatment => @treatment
+- content_for :sidebar do
+  = render 'patients/sidebar', :resource => resource.patient

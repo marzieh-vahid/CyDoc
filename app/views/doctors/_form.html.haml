@@ -1,0 +1,10 @@
+= simple_form_for resource do |f|
+  = render 'people/address_form', :f => f
+
+  %h3 Zulassung
+  .row-fluid
+    .span6= f.input :ean_party
+    .span6= f.input :zsr
+
+  .form-actions
+    = f.button :submit

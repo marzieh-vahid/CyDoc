@@ -1,0 +1,9 @@
+= simple_form_for resource do |f|
+  = render 'people/address_form', :f => f
+
+  = f.input :ean_party
+  = f.input :group_ean_party
+  = f.input :role, :collection => insurance_role_collection
+
+  .form-actions
+    = f.button :submit

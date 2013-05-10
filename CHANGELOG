@@ -1,0 +1,208 @@
+2.0.0.beta11
+============
+Fix and improve invoice reminder management.
+
+Upgrading:
+  Invoice and reminder period settings are now taken as days, not seconds. Please check and update
+  those values.
+
+2.0.0.beta10
+============
+This is a security update. Everyone is advised to update.
+
+This fixes a few issues in the underlying framework Ruby on Rails. Malicious
+users may run attacks on other users, or a denial of service attach could be
+done from the internet.
+
+2.0.0.beta9
+===========
+* Do not fail if invoice or treatment which failed in invoice batch job does not exist anymore.
+
+2.0.0.beta8
+===========
+* Add invoices#index.
+* Use same font-size for patient address for patient_letter as for insurance_recipe.
+* Show remarks in invoice view.
+
+2.0.0.beta7
+===========
+* Update some locales from Hozr.
+* Add access restrictions for Attachment.
+* Use template in PatientLetter document.
+* Port address part of patient letter from Hozr.
+* Use tenant as sender in invoice address.
+
+2.0.0.beta6
+===========
+Features:
+* Fix invoice reactivation to mark treatment as open.
+* Fix action buttons in invoice_batch_jobs.
+* Add navigation links to invoice_batch_jobs.
+* Fix invoice_batch_jobs view.
+* Refactor invoice_batch_printing.
+
+2.0.0.beta5
+===========
+Features:
+
+* Switch order by session of service_records in invoices.
+* Restyle and translate invoice action links.
+* Fix invoices#destroy action.
+* Add link to new invoice_batch_job to treatments index.
+* Implement AJAX update for treatment amount.
+
+2.0.0.beta4
+===========
+Features:
+* Fix treatment view.
+* Unify people views with hozr.
+* Drop Hozr specific create_all_treatments.
+* Only include service_items form in tariff_item_group form when persisted.
+* No need for obligation field in tariff item group form.
+* Do not use a template for PatientLetter.
+* Handle exception in AuthorizedController.interpolation_options.
+* Massiv cleanup of treatments controller.
+* Show sidebar in patient edit.
+* Fix treatment duration.
+* Increment session number for sessions on same date when creating an invoice.
+
+2.0.0.beta3
+===========
+Features:
+* Port invoices#print to new printing framework.
+* Port ActsAsDocument.print_document.
+* Port invoice printing.
+* Better patient sidebar.
+* Also show service_items in tariff_item edit.
+* Save passed in imported_id when creating a treatment.
+* Fix sessions#new action.
+* Mark sessions as charged if invoice is created.
+* Update attachments logic from hozr.
+* Add patients#dunning_stoped from Hozr.
+* Translations für tenant form.
+* Add administration menu.
+* Add billing tab to tenant form.
+* Add link to open_cases in invoices menu.
+* Set default biller and provider when creating an invoice.
+* Fix open_invoices list.
+* Add printing.cups_hostname tenant setting.
+
+2.0.0.beta2
+===========
+Features:
+* Add transliteration rules for :de local.
+* Use shorter Invoice.to_s by default.
+* Use proper names for invoice PDFs.
+* Port invoice filtering from Bookyt.
+* Better german wording for doctor.
+* Consistent translation for .biller.
+* Fix open treatment navigation link.
+* Validate presence of Tiers.biller and .provider.
+
+2.0.0.beta1
+===========
+Rewrite of most parts. Mainly porting to Rails 3, switching UI to be
+built on Twitter Bootstrap, and providing fulltext search for patients
+and more.
+
+It also uses more common code with other projects like Bookyt and Hozr
+by using factored out gems.
+
+This is a beta release.
+
+1.1.7
+=====
+This is a security update fixing an extremely critical issue, you should
+update as soon as possible!
+
+If you do not update, attackers might gain full access to your data, get
+password hashes, implement keylogger, and even run code as the user your
+webserver runs. Take it seriously!
+
+1.1.6
+=====
+Bug fixes
+* Fix bookkeeping to not use hardcoded debit account.
+* Some ordering and pagination fixes in VESR views.
+
+1.1.5
+=====
+Enhancements:
+* There's now a quick fix action for double payments.
+* Add support for UVG taxpoint units in TarmedTariff.
+
+Bug fixes
+* Handle doctor without email in reminder letter.
+
+1.1.4
+=====
+Enhancements:
+* Sort overdue invoices by due_date in invoice index.
+* Greeting in reminder and recall letters is not hardcoded to female anymore.
+* Full support to use either CUPS printing or PDF downloads for
+  invoices and reminders.
+* Give tariff item group a push to be returned as top search results
+
+Bug fixes:
+* Update nokogiri to 1.5.5 to fix build problem using ruby 1.9 on
+  Debian/Ubuntu.
+* Fix exception if Insurance has no code.
+* Drop label "Mail" in reminder letter closing.
+* Preselect current role in insurance form field.
+* Fix timezone issue with recall.
+* Fix phone number setting for patients and doctors.
+
+1.1.3
+=====
+This release contains a single bugfix: support new API for CoverCard
+patient data lookup.
+
+1.1.2
+=====
+Another patch release fixing many bugs in the recall system and giving
+more stable remote printing. Reminders can now be printed again directly
+from overdue invoices. One major feature made it, too: CyDoc now supports
+more than one account for ESR payment processing.
+
+Enhancements:
+* Use configurable grace period for invoices, default is 0 days.
+* Re-add direct reminder printing action.
+* Try printing 5 times before giving up.
+
+Bug fixes:
+* Refactor navigation and make some items visibility depending on
+  modules.* setting.
+* No blank options in Treatment form for law and reason fields.
+* Set ESR account for doctor.
+* Only show main menu if logged in.
+* Try 5 times before giving up on missing printer
+* Only show referring doctor section title in patient letter if doctor
+  is recorded.
+* Fix reminder letter for treatments with no referrer.
+* No newline in tiers soldant invoice remark.
+* Adapt recall PDF to new has_vcards interface.
+* Fix creating more than one recall on the same page.
+
+
+1.1.1
+=====
+A major bug in 1.1.0 broke creating new treatments for patients.
+Some more bugs where fixed in this release:
+* VESR files fail to import if a referenced invoice is invalid
+* Booking view is empty
+
+
+1.1.0
+=====
+More than 700 changes make this release almost a rewrite:-)
+
+Give it a try at https://cydoc-demo.cyt.ch!
+
+Highlights:
+* Faster, nicer invoices
+* Support for multiple bank accounts for payments
+* Support for Billing addresses
+* Support for CoverCard patient information updates
+* Support for Swiss Physio Tariff
+* Much simpler problem handling for VESR payments
+* Tool to track patients with bad addresses

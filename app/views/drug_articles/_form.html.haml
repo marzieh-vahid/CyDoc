@@ -1,0 +1,11 @@
+= simple_form_for [parent, resource] do |f|
+  = f.input :code
+  = f.input :description, :as => :string, :label => t_attr(:name, DrugArticle)
+  = f.input :number_of_pieces
+  = f.input :quantity
+  = f.input :quantity_unit, :as => :select, :collection => DrugArticle::QUANTITY_UNITS
+  = f.association :vat_class
+  = f.input :doctors_price, :required => true
+  = f.input :price, :required => true
+  .form-actions
+    = f.submit

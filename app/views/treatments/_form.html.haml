@@ -1,0 +1,17 @@
+= simple_form_for [:patient, @treatment] do |f|
+  = f.input :imported_id, :as => :hidden
+  .row-fluid
+    .span6= f.input :date_begin, :as => :date_field
+    .span6= f.input :date_end, :as => :date_field
+  .row-fluid
+    = f.fields_for :law do |law|
+      .span6= law.input :code, :collection => [['KVG', 'LawKvg'], ['UVG', 'LawUvg'], ['IVG', 'LawIvg'], ['MVG', 'LawMvg'], ['VVG', 'LawVvg'], ['ORG', 'LawOrg']], :include_blank => false
+    .span6= f.input :reason, :collection => ['Krankheit', 'Mutterschaft', 'Prävention', 'Unfall', 'Geburtsfehler'], :include_blank => false
+  .row-fluid
+    .span6= f.association :referrer, :input_html => {:class => 'select2'}, :input_html => {'data-placeholder' => 'Arzt auswählen', :class => 'select2'}
+    .span6= f.input :place_type, :collection => ['Praxis', 'Spital']
+  .row-fluid
+    .span12= f.association :diagnoses, :input_html => {:class => 'select2 span10'}
+
+  .form-actions
+    = f.button :submit

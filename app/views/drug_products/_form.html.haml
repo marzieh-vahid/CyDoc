@@ -1,0 +1,7 @@
+= simple_form_for resource do |f|
+  = f.input :name
+  .row-fluid
+    .span12
+      = f.input :description, :input_html => {:class => 'span11', :rows => 4}
+  .form-actions
+    = f.submit

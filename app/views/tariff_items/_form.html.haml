@@ -1,0 +1,17 @@
+= simple_form_for resource do |f|
+  .row-fluid
+    .span6= f.input :code
+    .span6= f.input :type_as_string, :as => :select, :required => true, :collection => type_as_string_collection
+  .row-fluid
+    .span12
+      = f.input :remark, :input_html => {:class => 'span11', :rows => 4}
+
+  - unless resource.is_a? TariffItemGroup
+    .row-fluid
+      = f.input :obligation
+    .row-fluid
+      .span6= f.input :amount_mt, :as => :string
+      .span6= f.input :amount_tt, :as => :string
+
+  .form-actions
+    = f.button :submit
