@@ -14,7 +14,6 @@ gem 'unicorn'
 gem 'sqlite3'
 gem 'mysql2'
 
-
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -22,7 +21,6 @@ group :assets do
   gem 'therubyracer'
   gem 'uglifier'
 end
-
 
 # Development
 # ===========
@@ -32,7 +30,6 @@ group :development do
 
   # Deployment
   gem 'capones_recipes'
-
 end
 
 # Test
@@ -40,7 +37,6 @@ end
 group :test do
   gem 'cucumber'
 end
-
 
 # Standard helpers
 # ================
@@ -128,9 +124,4 @@ gem 'cupsffi', :git => 'git://github.com/huerlisi/cupsffi.git'
 gem 'csv-mapper'
 
 # XML
-
 gem 'nokogiri'
-group :production do
-  gem "pg"
-end
-
